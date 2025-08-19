@@ -88,6 +88,7 @@ export const columns: ColumnDef<Post>[] = [
                 </Button>
             )
         },
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         cell: ({cell, row}) => {
             return new Date(row.original.created_at || '').toLocaleString()
         }

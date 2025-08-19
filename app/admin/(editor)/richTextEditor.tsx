@@ -72,7 +72,7 @@ export default function RichTextEditor({content, onChange, editable,clear}: Rich
     });
 
     useEffect(() => {
-        clear && editor?.commands.clearContent()
+        if(clear) editor?.commands.clearContent()
     }, [clear]);
 
     return (
