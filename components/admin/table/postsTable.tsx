@@ -47,8 +47,7 @@ export default function PostsTable({className,}: { className?: string, }) {
 
     useEffect(() => {
         getPosts().then(res => {
-            res && setPosts(res);
-            console.log('articles: ', articles)
+            if(res) setPosts(res);
         })
     }, [])
 

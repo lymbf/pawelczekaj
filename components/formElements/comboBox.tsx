@@ -50,7 +50,7 @@ export function ComboboxDemo({placeholder, data, value, setValue, setCategoryObj
                                     value={el.id.toString()}
                                     onSelect={(currentValue) => {
                                         setValue(currentValue === value ? "" : currentValue)
-                                        setCategoryObject && setCategoryObject(el)
+                                        if(setCategoryObject) setCategoryObject(el)
                                         setOpen(false)
                                     }}
                                 >

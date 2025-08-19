@@ -12,6 +12,7 @@ export default function PostFragment({className, title, created_at, content, id}
     content: string,
     id: string
 }) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [richText, setRichText] = useState(content);
 
     return (
