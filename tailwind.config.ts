@@ -57,6 +57,14 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily:{
+        'marker-aid': ['marker-aid'],
+        'tahoma': ['tahoma'],
+        'loos-compressed': ['loos-compressed'],
+        'sofia-pro': ['Sofia-pro'],
+        'acumin-pro': ['Acumin-pro'],
+        'poppins': ['poppins']
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
