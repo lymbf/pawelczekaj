@@ -6,15 +6,14 @@ import {Category, Post, Type} from "@/interfaces/posts";
 const getPosts = async ()=>{
     const supabase = await createClient()
     // @ts-ignore
-    const articles:Post[]|null = (await supabase.from('posts').select(`id, title, created_at, text, author ( id, name ), category ( id, name )`)).data
-    return articles
+    const posts:Post[]|null = (await supabase.from('posts').select(`id, title, created_at, text, author ( id, name ), category ( id, name )`)).data
+    return posts
 }
 
 const getPost = async (id:string)=>{
     const supabase = await createClient()
     // @ts-ignore
     const res:Post[]|null = (await supabase.from('posts').select(`id, title, created_at, text, author ( id, name ), category ( id, name )`).eq('id', id)).data
-    console.log('res: ', res)
     return  res
 }
 

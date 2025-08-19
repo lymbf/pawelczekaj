@@ -7,7 +7,6 @@ export default async function Page({params}:{params: Promise<{postID:string}>}){
     const posts = await getPosts();
     const {postID} = await params
     const post = (await getPost(postID))
-    console.log('my post: ', post)
     return(
         <main className="min-h-screen w-full gap-5 lg:gap-10 flex py-10 px-5">
             <LeftBar posts={posts} className={''}/>
